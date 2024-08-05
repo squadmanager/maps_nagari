@@ -44,7 +44,7 @@ class MapsWidget extends GetView<MapsWasteCollectionsController> {
                   mapsMcWcController.mcTripsDetailList.last.longitude,
                 )
               : controller.routePoints[0],
-          zoom: 15,
+          zoom: 14,
           // onTap: (tapPosition, point) {
           //   controller.latClick.value = point.latitude;
           //   controller.longClick.value = point.longitude;

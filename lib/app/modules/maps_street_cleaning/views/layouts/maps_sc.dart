@@ -38,7 +38,7 @@ class MapsSc extends GetView<MapsStreetCleaningController> {
                   mapsMcScController.mcTripsDetailList.last.longitude,
                 )
               : controller.routePoints[0],
-          zoom: 15,
+          zoom: 14,
           interactionOptions: controller.tracking.isNotEmpty
               ? InteractionOptions(
                   cursorKeyboardRotationOptions:

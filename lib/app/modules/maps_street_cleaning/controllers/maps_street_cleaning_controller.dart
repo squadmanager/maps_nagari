@@ -41,7 +41,7 @@ class MapsStreetCleaningController extends GetxController
   late PageController pageCarouselController;
 
   final attachmentList = List<DataAttachmentScModel>.empty().obs;
-  List<LatLng> routePoints = [const LatLng(-7.2875894, 112.632185)].obs;
+  List<LatLng> routePoints = [const LatLng(-0.9722283291919985, 116.70915419634736)].obs;
   List<Marker> markers = List.empty();
   List listLatLng = [].obs;
   List latLngFilter = [].obs;
