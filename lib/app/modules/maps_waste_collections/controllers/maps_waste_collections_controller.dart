@@ -329,7 +329,7 @@ class MapsWasteCollectionsController extends GetxController
     singleDateView.value = DateFormat("d MMMM y", "id_ID").format(dateTimeNow);
     filterDateC.text = singleDateView.value;
 
-    routePoints = [const LatLng(-7.2875894, 112.632185)];
+    routePoints = [const LatLng(-0.9722283291919985, 116.70915419634736)];
 
     animateMapMove(routePoints[0], 15);
     justShowCar(false);
