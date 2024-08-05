@@ -331,7 +331,7 @@ class MapsWasteCollectionsController extends GetxController
 
     routePoints = [const LatLng(-0.9722283291919985, 116.70915419634736)];
 
-    animateMapMove(routePoints[0], 15);
+    animateMapMove(routePoints[0], 14);
     justShowCar(false);
     detailVehicle.clear();
     searchC.text = '';

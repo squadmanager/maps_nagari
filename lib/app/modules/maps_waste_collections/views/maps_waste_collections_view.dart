@@ -638,7 +638,7 @@ class MapsWasteCollectionsView extends GetView<MapsWasteCollectionsController> {
                         onPressed: () {
                           controller.listElement.clear();
                           controller.animateMapMove(
-                              controller.routePoints[0], 15);
+                              controller.routePoints[0], 14);
                         },
                         backgroundColor:
                             HexColor(ColorWidget().primaryWasteCollections),
