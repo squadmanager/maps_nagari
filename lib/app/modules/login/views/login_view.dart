@@ -72,7 +72,7 @@ class LoginView extends GetView<LoginController> {
                         padding: const EdgeInsets.only(
                             top: 20.0, right: 20.0, left: 20.0),
                         child: InputWidget(
-                          title: 'Passowrd',
+                          title: 'Password',
                           controllerText: controller.passwordC,
                           hintText: 'Enter Password',
                           messageError: 'Password Required!',
