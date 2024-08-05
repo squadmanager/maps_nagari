@@ -1,5 +1,5 @@
 class UrlApi {
-  final url = 'https://api-myrekso.reksoratan-indonesia.com';
+  final url = 'https://api-nagari.squadmanager.id';
 
   late String login = '$url/api/login';
   late String profile = '$url/api/profile';

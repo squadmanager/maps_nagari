@@ -30,7 +30,7 @@ class LoginView extends GetView<LoginController> {
                       Padding(
                         padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                         child: Image.asset(
-                          'assets/images/logo.png',
+                          'assets/images/logo_urbana.png',
                           width: 150,
                           height: 150,
                         ),
@@ -39,7 +39,7 @@ class LoginView extends GetView<LoginController> {
                         padding: const EdgeInsets.only(
                             top: 10.0, left: 20.0, right: 20.0),
                         child: Text(
-                          'Maps Rekso App',
+                          'Maps Nagari',
                           style: TextStyle(
                             fontFamily: 'BerlinSans',
                             fontWeight: FontWeight.w700,

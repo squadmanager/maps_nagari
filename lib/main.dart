@@ -13,14 +13,14 @@ void main() async {
   if (kIsWeb) {
     await Firebase.initializeApp(
       options: const FirebaseOptions(
-        apiKey: "AIzaSyCemfI9ouMyOvwE1DGGVFImzUEH8Nq5q48",
-        appId: "1:426682836908:web:df5205cd0afa3a269c7c09",
-        messagingSenderId: "426682836908",
-        projectId: "apps-rekso-ratan-indonesia",
-        authDomain: "apps-rekso-ratan-indonesia.firebaseapp.com",
+        apiKey: "AIzaSyDp7q9sY1HX7t8xYQvyLKcM-ynJBVauGb4",
+        appId: "1:830274020180:web:a76c0f748eb07957f2dec1",
+        messagingSenderId: "830274020180",
+        projectId: "smart-trash-system-67583",
+        authDomain: "smart-trash-system-67583.firebaseapp.com",
         databaseURL:
-            "https://apps-rekso-ratan-indonesia-default-rtdb.asia-southeast1.firebasedatabase.app",
-        storageBucket: "apps-rekso-ratan-indonesia.appspot.com",
+            "https://smart-trash-system-67583-default-rtdb.asia-southeast1.firebasedatabase.app",
+        storageBucket: "smart-trash-system-67583.appspot.com",
       ),
     );
   } else {
@@ -43,7 +43,7 @@ void main() async {
             return Obx(
               () => GetMaterialApp(
                   debugShowCheckedModeBanner: false,
-                  title: "Rekso",
+                  title: "Nagari",
                   initialRoute: authC.isAuth.isTrue
                       ? Routes.BOTTOM_NAVIGATION
                       : Routes.LOGIN,

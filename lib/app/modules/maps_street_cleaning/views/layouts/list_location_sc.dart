@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -95,62 +94,62 @@ class ListLocationSc extends GetView<MapsStreetCleaningController> {
     );
   }
 
-  Widget vehicle(data) {
-    return StreamBuilder(
-      stream: controller.getVehicle(),
-      builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if (snapshot.hasError) {
-          return Text(
-            'Something went wrong',
-            style: GoogleFonts.poppins(
-              fontSize: 15.0,
-              fontWeight: FontWeight.w600,
-              color: HexColor(ColorWidget().black),
-            ),
-          );
-        }
+  // Widget vehicle(data) {
+  //   return StreamBuilder(
+  //     stream: controller.getVehicle(),
+  //     builder: (BuildContext context, AsyncSnapshot snapshot) {
+  //       if (snapshot.hasError) {
+  //         return Text(
+  //           'Something went wrong',
+  //           style: GoogleFonts.poppins(
+  //             fontSize: 15.0,
+  //             fontWeight: FontWeight.w600,
+  //             color: HexColor(ColorWidget().black),
+  //           ),
+  //         );
+  //       }
 
-        if (snapshot.hasData) {
-          DataSnapshot dataSnapshot = snapshot.data.snapshot;
-          Map dataEsp = dataSnapshot.value as Map;
+  //       if (snapshot.hasData) {
+  //         DataSnapshot dataSnapshot = snapshot.data.snapshot;
+  //         Map dataEsp = dataSnapshot.value as Map;
 
-          controller.vehicleName.clear();
-          controller.latLngNow.clear();
-          controller.allTracking.clear();
-          controller.vehicleProfile.clear();
+  //         controller.vehicleName.clear();
+  //         controller.latLngNow.clear();
+  //         controller.allTracking.clear();
+  //         controller.vehicleProfile.clear();
 
-          dataEsp.forEach((key, value) {
-            if (value['lat'] != null && value['lat'] != '') {
-              if (value['lat']['float'] != null &&
-                  value['lat']['float'] != '') {
-                controller.vehicleName.add(key);
-                controller.latLngNow.add(
-                  {'lat': value['lat']['float'], 'lng': value['lng']['float']},
-                );
-                controller.vehicleProfile.add(
-                  value['profile'],
-                );
+  //         dataEsp.forEach((key, value) {
+  //           if (value['lat'] != null && value['lat'] != '') {
+  //             if (value['lat']['float'] != null &&
+  //                 value['lat']['float'] != '') {
+  //               controller.vehicleName.add(key);
+  //               controller.latLngNow.add(
+  //                 {'lat': value['lat']['float'], 'lng': value['lng']['float']},
+  //               );
+  //               controller.vehicleProfile.add(
+  //                 value['profile'],
+  //               );
 
-                controller.allTracking.add({
-                  'name': key,
-                  'route': value['tracking'],
-                });
-              }
-            }
-          });
+  //               controller.allTracking.add({
+  //                 'name': key,
+  //                 'route': value['tracking'],
+  //               });
+  //             }
+  //           }
+  //         });
 
-          return MapsSc(
-            data: data,
-            // vehicleName: controller.vehicleName,
-            // latLngNow: controller.latLngNow,
-            // vehicleProfile: controller.vehicleProfile,
-          );
-        } else {
-          return Container();
-        }
-      },
-    );
-  }
+  //         return MapsSc(
+  //           data: data,
+  //           // vehicleName: controller.vehicleName,
+  //           // latLngNow: controller.latLngNow,
+  //           // vehicleProfile: controller.vehicleProfile,
+  //         );
+  //       } else {
+  //         return Container();
+  //       }
+  //     },
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
