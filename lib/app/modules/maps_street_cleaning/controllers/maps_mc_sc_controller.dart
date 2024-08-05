@@ -141,7 +141,7 @@ class MapsMcScController extends GetxController {
         return element.vehicleGroups
                 .where((vg) =>
                     vg == mapsMonitoringScC.gpsGroup.value &&
-                    element.licensePlate.contains('-') == false)
+                    element.licensePlate.contains('- CAM') == false)
                 .isNotEmpty
             ? true
             : false;

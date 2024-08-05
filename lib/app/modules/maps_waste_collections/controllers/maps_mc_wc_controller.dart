@@ -152,11 +152,13 @@ class MapsMcWcController extends GetxController {
         return element.vehicleGroups
                 .where((vg) =>
                     vg == mapsMonitoringC.gpsGroup.value &&
-                    element.licensePlate.contains('-') == false)
+                    element.licensePlate.contains('- CAM') == false)
                 .isNotEmpty
             ? true
             : false;
       }).toList();
+
+      print('${mcVehicleStatusesList} ===========');
 
       if (mcVehicleStatusesList.isNotEmpty) {
         isEmptyVehicleStatuses.value = false;
