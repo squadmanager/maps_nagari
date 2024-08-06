@@ -18,7 +18,7 @@ class ListLocationWidget extends GetView<MapsWasteCollectionsController> {
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
         if (snapshot.hasError) {
           return Text(
-            'Something went wrong sdfdsfddf',
+            'Something went wrong',
             style: GoogleFonts.poppins(
               fontSize: 15.0,
               fontWeight: FontWeight.w600,
