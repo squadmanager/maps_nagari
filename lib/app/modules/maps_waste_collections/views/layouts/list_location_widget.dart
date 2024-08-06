@@ -16,7 +16,6 @@ class ListLocationWidget extends GetView<MapsWasteCollectionsController> {
     return StreamBuilder<QuerySnapshot>(
       stream: controller.locationDragonflyStream(),
       builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-        print('${snapshot} =========');
         if (snapshot.hasError) {
           return Text(
             'Something went wrong sdfdsfddf',

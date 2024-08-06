@@ -158,8 +158,6 @@ class MapsMcWcController extends GetxController {
             : false;
       }).toList();
 
-      print('${mcVehicleStatusesList} ===========');
-
       if (mcVehicleStatusesList.isNotEmpty) {
         isEmptyVehicleStatuses.value = false;
       } else {

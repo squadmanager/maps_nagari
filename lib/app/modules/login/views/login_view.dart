@@ -30,7 +30,7 @@ class LoginView extends GetView<LoginController> {
                       Padding(
                         padding: const EdgeInsets.only(left: 20.0, right: 20.0),
                         child: Image.asset(
-                          'assets/images/logo_urbana.png',
+                          'assets/images/logo_nagari.png',
                           width: 150,
                           height: 150,
                         ),

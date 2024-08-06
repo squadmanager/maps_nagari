@@ -428,7 +428,7 @@ class MapsStreetCleaningController extends GetxController
           routePoints
               .add(LatLng(double.parse(lat1[1]), double.parse(long1[0])));
         }
-      } else {
+      } else if (responseDirections.statusCode == 500) {
         refreshData();
         isLoading.value = false;
         WarningWidget().dialog('Please contact the administrator!');
